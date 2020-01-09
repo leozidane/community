@@ -6,7 +6,7 @@ public class User {
     private int id;
     private String username;
     private String password;
-    private String sale;
+    private String salt;
     private String email;
     private int type;
     private int status;
@@ -38,12 +38,12 @@ public class User {
         this.password = password;
     }
 
-    public String getSale() {
-        return sale;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setSale(String sale) {
-        this.sale = sale;
+    public void setSalt(String sale) {
+        this.salt = sale;
     }
 
     public String getEmail() {
@@ -100,7 +100,7 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", sale='" + sale + '\'' +
+                ", sale='" + salt + '\'' +
                 ", email='" + email + '\'' +
                 ", type=" + type +
                 ", status=" + status +
