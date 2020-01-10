@@ -2,6 +2,9 @@ package com.zk.community.entity;
 
 import java.util.Date;
 
+/**
+ * 首页数据
+ */
 public class DiscussPost {
     private int id;
     private int userId;

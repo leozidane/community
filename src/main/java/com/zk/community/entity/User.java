@@ -2,6 +2,9 @@ package com.zk.community.entity;
 
 import java.util.Date;
 
+/**
+ * 用户表数据
+ */
 public class User {
     private int id;
     private String username;
