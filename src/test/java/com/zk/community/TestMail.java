@@ -33,4 +33,10 @@ public class TestMail {
         System.out.println(content);
         mailClient.sendMail("807341159@qq.com", "HTML", content);
     }
+
+    @Test
+    public void test1() {
+        String str = "123";
+        System.out.println(str.substring(str.lastIndexOf("2")));
+    }
 }

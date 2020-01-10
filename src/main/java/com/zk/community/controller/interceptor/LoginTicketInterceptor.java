@@ -5,7 +5,6 @@ import com.zk.community.entity.User;
 import com.zk.community.service.UserService;
 import com.zk.community.util.CookieUtil;
 import com.zk.community.util.HostHolder;
-import org.apache.catalina.Host;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -37,17 +36,15 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
                 //根据凭证查询用户
                 User user = userService.findUserById(loginTicket.getUserId());
                 //在本次请求中持有用户
-                hostHolder.set(user);
+              hostHolder.setUser(user);
             }
-
         }
-
         return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        User user = hostHolder.get();
+        User user = hostHolder.getUser();
         if (user != null || modelAndView != null) {
             modelAndView.addObject("loginUser", user);
         }

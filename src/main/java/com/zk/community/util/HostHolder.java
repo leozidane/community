@@ -11,11 +11,11 @@ public class HostHolder {
 
     private ThreadLocal<User> threadLocal = new ThreadLocal<>();
 
-    public void set(User user) {
+    public void setUser(User user) {
         threadLocal.set(user);
     }
 
-    public User get() {
+    public User getUser() {
         return threadLocal.get();
     }
 
