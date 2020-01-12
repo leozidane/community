@@ -24,13 +24,13 @@
         where username = #{username}
     </select>
 
-    <select id="selectByEmail" resultType="user">
+    <select id="selectByEmail" resultType="User">
         select <include refid="selectId"></include>
         from user
         where email = #{email}
     </select>
 
-    <insert id="insertUser" parameterType="User" keyProperty="id">
+    <insert id="insertUser" parameterType="user" keyProperty="id">
         insert into user (<include refid="insertUser"></include>)
         values(#{username}, #{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime})
     </insert>

@@ -1,8 +1,10 @@
 package com.zk.community;
 
+import com.zk.community.dao.CommentMapper;
 import com.zk.community.dao.DiscussPostMapper;
 import com.zk.community.dao.LoginTicketMapper;
 import com.zk.community.dao.UserMapper;
+import com.zk.community.entity.Comment;
 import com.zk.community.entity.DiscussPost;
 import com.zk.community.entity.LoginTicket;
 import com.zk.community.entity.User;
@@ -29,6 +31,9 @@ public class MapperTest {
 
     @Autowired
     private LoginTicketMapper loginTicketMapper;
+
+    @Autowired
+    private CommentMapper commentMapper;
 
     @Test
     public void testSelectDiscussPosts() {
@@ -70,5 +75,32 @@ public class MapperTest {
     public void testUpdateLoginTicket() {
         int abc = loginTicketMapper.updateStatus("abc", 1);
         System.out.println(abc);
+    }
+
+    @Test
+    public void testInsertDiscussPost() {
+        DiscussPost discussPost = new DiscussPost();
+        discussPost.setUserId(11);
+        discussPost.setContent("2123");
+        discussPost.setCreateTime(new Date());
+        discussPostMapper.insertDiscussPost(discussPost);
+    }
+
+    @Test
+    public void testSelectDiscussPostById() {
+        DiscussPost discussPost = discussPostMapper.selectDiscussPostById(276);
+        System.out.println(discussPost);
+    }
+
+    @Test
+    public void testSelectCommentsByEntity() {
+        List<Comment> comments = commentMapper.selectCommentsByEntity(1, 228, 0, 10);
+        System.out.println(comments);
+    }
+
+    @Test
+    public void testSelectCountByEntity() {
+        int i = commentMapper.selectCountByEntity(1, 228);
+        System.out.println(i);
     }
 }
