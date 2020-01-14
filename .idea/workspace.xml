@@ -3,18 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="92fa4840-e4f8-4275-856d-548324109de9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zk/community/MapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zk/community/MapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/letter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zk/community/MapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zk/community/MapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginRequiredInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginRequiredInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginTicketInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginTicketInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/interceptor/LoginTicketInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/interceptor/LoginTicketInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/500.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,13 +84,13 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Java\code\community\src\main\resources\templates" />
-      <recent name="D:\Java\code\community\src\main\resources\templates\demo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\code\community\src\main\resources\mapper" />
       <recent name="D:\Java\code\community\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\code\community\src\main\resources\templates" />
+      <recent name="D:\Java\code\community\src\main\resources\templates\demo" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -226,7 +224,7 @@
       <workItem from="1578468499735" duration="106355000" />
       <workItem from="1578801197309" duration="21781000" />
       <workItem from="1578874386484" duration="15854000" />
-      <workItem from="1578967390219" duration="8119000" />
+      <workItem from="1578967390219" duration="14034000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578468634911</created>
@@ -263,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578826090957</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完成发布帖子，帖子详情页，显示评论以及增加评论功能">
+      <created>1578986967761</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578986967761</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

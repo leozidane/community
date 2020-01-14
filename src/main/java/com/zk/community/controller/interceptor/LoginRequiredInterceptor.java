@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
  * 对需要有登录权限的请求进行验证
  */
 @Component
-public class LoginRequiredInterceptor implements HandlerInterceptor {
+public class  LoginRequiredInterceptor implements HandlerInterceptor {
 
     @Autowired
     HostHolder hostHolder;

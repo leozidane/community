@@ -29,7 +29,7 @@ public class MessageController {
     @Autowired
     private UserService userService;
 
-    //私信列表请求
+    //私信列表
     @RequestMapping(path = "/message/list", method = RequestMethod.GET)
     public String getMessageList(Model model, Page page) {
         User user = hostHolder.getUser();
