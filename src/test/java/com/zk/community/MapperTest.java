@@ -1,13 +1,8 @@
 package com.zk.community;
 
-import com.zk.community.dao.CommentMapper;
-import com.zk.community.dao.DiscussPostMapper;
-import com.zk.community.dao.LoginTicketMapper;
-import com.zk.community.dao.UserMapper;
-import com.zk.community.entity.Comment;
-import com.zk.community.entity.DiscussPost;
-import com.zk.community.entity.LoginTicket;
-import com.zk.community.entity.User;
+import ch.qos.logback.classic.spi.EventArgUtil;
+import com.zk.community.dao.*;
+import com.zk.community.entity.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +29,9 @@ public class MapperTest {
 
     @Autowired
     private CommentMapper commentMapper;
+
+    @Autowired
+    private MessageMapper messageMapper;
 
     @Test
     public void testSelectDiscussPosts() {
@@ -102,5 +100,34 @@ public class MapperTest {
     public void testSelectCountByEntity() {
         int i = commentMapper.selectCountByEntity(1, 228);
         System.out.println(i);
+    }
+
+    @Test
+    public void testSelectConversations() {
+        List<Message> messages = messageMapper.selectConversations(111, 0, 20);
+        System.out.println(messages);
+    }
+
+    @Test
+    public void testSelectConversationCount() {
+        int i = messageMapper.selectConversationCount(111);
+        System.out.println(i);
+    }
+
+    @Test
+    public void testSelectLetters() {
+        List<Message> messages = messageMapper.selectLetters("111_112", 0, 20);
+        System.out.println(messages);
+    }
+
+    @Test
+    public void testSelectLetterCount() {
+        int i = messageMapper.selectLetterCount("111_112");
+        System.out.println(i);
+    }
+
+    @Test
+    public void testSelectLetterUnreadCount() {
+        System.out.println(messageMapper.selectLetterUnreadCount(111, null));
     }
 }
