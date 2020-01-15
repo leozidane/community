@@ -2,6 +2,7 @@ package com.zk.community.controller;
 
 import com.zk.community.annotation.LoginRequired;
 import com.zk.community.entity.User;
+import com.zk.community.service.LikeService;
 import com.zk.community.service.UserService;
 import com.zk.community.util.CommunityUtil;
 import com.zk.community.util.HostHolder;
@@ -36,6 +37,9 @@ public class UserController {
     @Autowired
     private HostHolder hostHolder;
 
+    @Autowired
+    private LikeService likeService;
+
     @Value("${server.servlet.context-path}")
     private String contextPath;
 
@@ -46,7 +50,7 @@ public class UserController {
     private String upload;
 
     /**
-     * 用户设置页面访问请求
+     * 用户设置页面
      * @return
      */
     @LoginRequired
@@ -56,7 +60,7 @@ public class UserController {
     }
 
     /**
-     * 头像上传请求
+     * 头像上传
      * @return
      */
     @LoginRequired
@@ -100,7 +104,7 @@ public class UserController {
     }
 
     /**
-     * 获取图片请求
+     * 获取图片
      * @param filename
      * @param response
      */
@@ -171,5 +175,20 @@ public class UserController {
         userService.updatePassword(user.getId(), newPassword);
 
         return "redirect:/index";
+    }
+
+    //个人主页
+    @RequestMapping(path = "/profile/{userId}", method = RequestMethod.GET)
+    public String getProfilePage(@PathVariable("userId") int userId, Model model) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+        //用户
+        model.addAttribute("user", user);
+        //点赞数
+        long likeCount = likeService.findUserLikeCount(userId);
+        model.addAttribute("likeCount", likeCount);
+        return "/site/profile";
     }
 }

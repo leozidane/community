@@ -3,16 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="92fa4840-e4f8-4275-856d-548324109de9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/DiscussPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/DiscussPostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginRequiredInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginRequiredInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginTicketInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/interceptor/LoginTicketInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/DiscussPostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/DiscussPostController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/interceptor/LoginTicketInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/interceptor/LoginTicketInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/discuss-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/discuss-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/profile.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +33,20 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -31,6 +55,7 @@
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -111,54 +136,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CommunityApplication">
-    <configuration name="MapperTest.testSelectConversationCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="community" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zk.community.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zk.community" />
-      <option name="MAIN_CLASS_NAME" value="com.zk.community.MapperTest" />
-      <option name="METHOD_NAME" value="testSelectConversationCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapperTest.testSelectConversations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="community" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zk.community.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zk.community" />
-      <option name="MAIN_CLASS_NAME" value="com.zk.community.MapperTest" />
-      <option name="METHOD_NAME" value="testSelectConversations" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapperTest.testSelectLetterCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="community" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zk.community.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zk.community" />
-      <option name="MAIN_CLASS_NAME" value="com.zk.community.MapperTest" />
-      <option name="METHOD_NAME" value="testSelectLetterCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MapperTest.testSelectLetterUnreadCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="community" />
       <extension name="coverage">
@@ -175,7 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperTest.testSelectLetters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RedisTest.testBoundOperation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="community" />
       <extension name="coverage">
         <pattern>
@@ -184,8 +161,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.zk.community" />
-      <option name="MAIN_CLASS_NAME" value="com.zk.community.MapperTest" />
-      <option name="METHOD_NAME" value="testSelectLetters" />
+      <option name="MAIN_CLASS_NAME" value="com.zk.community.RedisTest" />
+      <option name="METHOD_NAME" value="testBoundOperation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zk.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zk.community" />
+      <option name="MAIN_CLASS_NAME" value="com.zk.community.RedisTest" />
+      <option name="METHOD_NAME" value="testHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zk.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zk.community" />
+      <option name="MAIN_CLASS_NAME" value="com.zk.community.RedisTest" />
+      <option name="METHOD_NAME" value="testString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testTransactional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zk.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zk.community" />
+      <option name="MAIN_CLASS_NAME" value="com.zk.community.RedisTest" />
+      <option name="METHOD_NAME" value="testTransactional" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedisTest.testTransactional" />
+        <item itemvalue="JUnit.RedisTest.testBoundOperation" />
+        <item itemvalue="JUnit.RedisTest.testHash" />
+        <item itemvalue="JUnit.RedisTest.testString" />
         <item itemvalue="JUnit.MapperTest.testSelectLetterUnreadCount" />
-        <item itemvalue="JUnit.MapperTest.testSelectConversationCount" />
-        <item itemvalue="JUnit.MapperTest.testSelectLetterCount" />
-        <item itemvalue="JUnit.MapperTest.testSelectLetters" />
-        <item itemvalue="JUnit.MapperTest.testSelectConversations" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +249,8 @@
       <workItem from="1578468499735" duration="106355000" />
       <workItem from="1578801197309" duration="21781000" />
       <workItem from="1578874386484" duration="15854000" />
-      <workItem from="1578967390219" duration="14034000" />
+      <workItem from="1578967390219" duration="15248000" />
+      <workItem from="1579065746561" duration="26651000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578468634911</created>
@@ -268,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578986967761</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="私信模块以及统一的异常，日志处理">
+      <created>1579015712249</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579015712249</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +326,7 @@
     <MESSAGE value="开发登录退出功能以及显示登录信息" />
     <MESSAGE value="登录模块完成" />
     <MESSAGE value="完成发布帖子，帖子详情页，显示评论以及增加评论功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成发布帖子，帖子详情页，显示评论以及增加评论功能" />
+    <MESSAGE value="私信模块以及统一的异常，日志处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="私信模块以及统一的异常，日志处理" />
   </component>
 </project>
