@@ -2,8 +2,10 @@ package com.zk.community.controller;
 
 import com.zk.community.annotation.LoginRequired;
 import com.zk.community.entity.User;
+import com.zk.community.service.FollowService;
 import com.zk.community.service.LikeService;
 import com.zk.community.service.UserService;
+import com.zk.community.util.CommunityConstant;
 import com.zk.community.util.CommunityUtil;
 import com.zk.community.util.HostHolder;
 import org.apache.commons.lang3.StringUtils;
@@ -20,14 +22,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController implements CommunityConstant {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -39,6 +40,9 @@ public class UserController {
 
     @Autowired
     private LikeService likeService;
+
+    @Autowired
+    private FollowService followService;
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
@@ -189,6 +193,18 @@ public class UserController {
         //点赞数
         long likeCount = likeService.findUserLikeCount(userId);
         model.addAttribute("likeCount", likeCount);
+        //关注人数
+        long followeeCount = followService.findFolloweeCount(userId, ENTITY_TYPE_USER);
+        model.addAttribute("followeeCount", followeeCount);
+        //粉丝数量
+        long followerCount = followService.findFollowerCount(ENTITY_TYPE_USER, userId);
+        model.addAttribute("followerCount", followerCount);
+        //当前用户的关注状态
+        boolean hasFollowed = false;
+        if (hostHolder.getUser() != null) {
+            hasFollowed = followService.hasFollowed(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
+        }
+        model.addAttribute("hasFollowed", hasFollowed);
         return "/site/profile";
     }
 }
