@@ -4,6 +4,7 @@ import com.zk.community.entity.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
+@Deprecated
 public interface LoginTicketMapper {
     @Select({
             "select id, user_id, ticket, status, expired ",
