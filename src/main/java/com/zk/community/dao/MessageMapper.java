@@ -28,4 +28,16 @@ public interface MessageMapper {
 
     //查询某个私信未读消息数量或当前用户所有未读私信数量
     int selectLetterUnreadCount(int userId, String conversationId);
+
+    //查询某个主题的最新通知
+    Message selectLatestNotice(int userId, String topic);
+
+    //查询某个主题包含所有的通知数量
+    int selectNoticeCount(int userId, String topic);
+
+    //查询未读通知的数量
+    int selectNoticeUnreadCount(int userId, String topic);
+
+    //查询某个主题所包含的通知列表
+    List<Message> selectNoticeList(int userId, String topic, int offset, int limit);
 }

@@ -30,6 +30,9 @@ public class ServiceLogAspect {
     public void before(JoinPoint joinPoint) {
         //用户[1,2,3,4](ip地址)，在[xxx],访问了[方法的全限定名]
         ServletRequestAttributes  requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        if (requestAttributes == null) {
+            return;
+        }
         //获取HttpServletRequest地址
         HttpServletRequest request = requestAttributes.getRequest();
         String ip = request.getRemoteHost();

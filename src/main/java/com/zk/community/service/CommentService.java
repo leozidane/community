@@ -34,6 +34,9 @@ public class CommentService {
         return commentMapper.selectCountByEntity(entityType, entityId);
     }
 
+    public Comment findCommentById(int id) {
+        return commentMapper.selectCommentById(id);
+    }
     /**
      * 增加评论
      * @param comment
