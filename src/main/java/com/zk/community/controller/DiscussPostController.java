@@ -1,9 +1,7 @@
 package com.zk.community.controller;
 
-import com.zk.community.entity.Comment;
-import com.zk.community.entity.DiscussPost;
-import com.zk.community.entity.Page;
-import com.zk.community.entity.User;
+import com.zk.community.entity.*;
+import com.zk.community.event.EventProducer;
 import com.zk.community.service.CommentService;
 import com.zk.community.service.DiscussPostService;
 import com.zk.community.service.LikeService;
@@ -40,6 +38,9 @@ public class DiscussPostController implements CommunityConstant {
     @Autowired
     private LikeService likeService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     /**
      * 发布帖子请求
      * @param title
@@ -60,6 +61,14 @@ public class DiscussPostController implements CommunityConstant {
         discussPost.setContent(content);
         discussPost.setCreateTime(new Date());
         discussPostService.addDiscussPost(discussPost);
+
+        //触发发帖事件
+        Event event = new Event();
+        event.setTopic(TOPIC_PUBLISH)
+                .setUserId(user.getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(discussPost.getId());
+        eventProducer.fireEvent(event);
 
         return CommunityUtil.getJSONString(0, "发布成功");
     }
