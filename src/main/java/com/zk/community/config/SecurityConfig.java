@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
+//Spring Security配置类
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter implements CommunityConstant {
 
@@ -49,7 +49,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                         AUTHORITY_USER,
                         AUTHORITY_MODERATOR
                 )
-                .anyRequest().permitAll();
+                .antMatchers(
+                        "/discuss/top",
+                        "/discuss/wonderful"
+                )
+                .hasAnyAuthority(
+                        AUTHORITY_MODERATOR
+                )
+                .antMatchers(
+                        "/discuss/delete"
+                )
+                .hasAnyAuthority(
+                        AUTHORITY_ADMIN
+                )
+                .anyRequest().permitAll()
+                .and().csrf().disable();
         //权限不够时的处理
         http.exceptionHandling()
                 //处理没有登录时的操作
@@ -58,7 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
                         String xRequestedWith = request.getHeader("x-requested-with");
                         if ("XMLHttpRequest".equals(xRequestedWith)) {
-                            response.setContentType("application/plain,charset=UTF-8");
+                            response.setContentType("application/plain;charset=utf-8");
                             response.getWriter().write(CommunityUtil.getJSONString(403, "您还没有登录哦"));
                         }else {
                             response.sendRedirect(request.getContextPath() + "/login");
@@ -71,7 +85,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e) throws IOException, ServletException {
                         String xRequestedWith = request.getHeader("x-requested-with");
                         if ("XMLHttpRequest".equals(xRequestedWith)) {
-                            response.setContentType("application/plain,charset=UTF-8");
+                            response.setContentType("application/plain;charset=utf-8");
                             response.getWriter().write(CommunityUtil.getJSONString(403, "您没有访问此功能的权限"));
                         }else {
                             response.sendRedirect(request.getContextPath() + "/denied");
