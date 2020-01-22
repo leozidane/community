@@ -12,6 +12,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.GrantedAuthoritiesContainer;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -120,7 +122,7 @@ public class UserService implements CommunityConstant {
             return ACTIVATION_REPEAT;
         } else if (user.getActivationCode().equals(code)) {
             userMapper.updateStatus(userId, 1);
-            clearCache(userId );
+            clearCache(userId);
             return ACTIVATION_SUCCESS;
         } else {
             return ACTIVATION_FAILURE;
@@ -180,18 +182,20 @@ public class UserService implements CommunityConstant {
 
     /**
      * 退出登录功能
+     *
      * @param ticket
      */
     public void logout(String ticket) {
 //        loginTicketMapper.updateStatus(ticket, 1);
-       String ticketKey = RedisKeyUtil.getTicketKey(ticket);
-       LoginTicket loginTicket = (LoginTicket) redisTemplate.opsForValue().get(ticketKey);
-       loginTicket.setStatus(1);
-       redisTemplate.opsForValue().set(ticketKey, loginTicket);
+        String ticketKey = RedisKeyUtil.getTicketKey(ticket);
+        LoginTicket loginTicket = (LoginTicket) redisTemplate.opsForValue().get(ticketKey);
+        loginTicket.setStatus(1);
+        redisTemplate.opsForValue().set(ticketKey, loginTicket);
     }
 
     /**
      * 根据登录凭证获取登录信息对象
+     *
      * @param ticket
      * @return
      */
@@ -202,6 +206,7 @@ public class UserService implements CommunityConstant {
 
     /**
      * 更新头像
+     *
      * @param userId
      * @param url
      * @return
@@ -214,19 +219,20 @@ public class UserService implements CommunityConstant {
 
     /**
      * 更新密码
+     *
      * @param userId
      * @param password
      * @return
      */
     public int updatePassword(int userId, String password) {
 //        return userMapper.updatePassword(userId,password);
-        int rows = userMapper.updatePassword(userId,password);
+        int rows = userMapper.updatePassword(userId, password);
         clearCache(userId);
         return rows;
     }
 
     public User findUserByUsername(String username) {
-       return userMapper.selectByName(username);
+        return userMapper.selectByName(username);
     }
 
     //1.优先从缓存中取值
@@ -234,6 +240,7 @@ public class UserService implements CommunityConstant {
         String userKey = RedisKeyUtil.getUserKey(id);
         return (User) redisTemplate.opsForValue().get(userKey);
     }
+
     //2.取不到时初始化缓存数据
     private User initCache(int id) {
         User user = userMapper.selectById(id);
@@ -241,9 +248,29 @@ public class UserService implements CommunityConstant {
         redisTemplate.opsForValue().set(userKey, user, 3600, TimeUnit.SECONDS);
         return user;
     }
+
     //3.删除缓存数据
     private void clearCache(int id) {
         String userKey = RedisKeyUtil.getUserKey(id);
         redisTemplate.opsForValue().decrement(userKey);
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities(int userId) {
+        User user = userMapper.selectById(userId);
+        List<GrantedAuthority> list = new ArrayList<>();
+        list.add(new GrantedAuthority() {
+            @Override
+            public String getAuthority() {
+                switch (user.getType()) {
+                    case 1:
+                        return AUTHORITY_ADMIN;
+                    case 2:
+                        return AUTHORITY_MODERATOR;
+                    default:
+                        return AUTHORITY_USER;
+                }
+            }
+        });
+        return list;
     }
 }

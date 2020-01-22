@@ -68,6 +68,7 @@ public class MessageController implements CommunityConstant {
         return "/site/letter";
     }
 
+    //私信页详情
     @RequestMapping(path = "/message/detail/{conversationId}", method = RequestMethod.GET)
     public String getMessageDetail(@PathVariable("conversationId") String conversationId, Model model, Page page) {
 
