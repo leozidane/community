@@ -1,5 +1,6 @@
 package com.zk.community.config;
 
+import com.zk.community.controller.interceptor.DataInterceptor;
 import com.zk.community.controller.interceptor.LoginRequiredInterceptor;
 import com.zk.community.controller.interceptor.LoginTicketInterceptor;
 import com.zk.community.controller.interceptor.MessageInterceptor;
@@ -15,13 +16,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Autowired
-    LoginTicketInterceptor loginTicketInterceptor;
+    private LoginTicketInterceptor loginTicketInterceptor;
 
 //    @Autowired
 //    LoginRequiredInterceptor loginRequiredInterceptor;
 
     @Autowired
-    MessageInterceptor messageInterceptor;
+    private MessageInterceptor messageInterceptor;
+
+    @Autowired
+    private DataInterceptor dataInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginTicketInterceptor).excludePathPatterns(
@@ -32,6 +37,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //                "/**/*.css", "/**/*.js", "/**/*.jpg", "/**/*.png", "/**/*.jpeg"
 //        );
         registry.addInterceptor(messageInterceptor).excludePathPatterns(
+                "/**/*.css", "/**/*.js", "/**/*.jpg", "/**/*.png", "/**/*.jpeg"
+        );
+        registry.addInterceptor(dataInterceptor).excludePathPatterns(
                 "/**/*.css", "/**/*.js", "/**/*.jpg", "/**/*.png", "/**/*.jpeg"
         );
     }
