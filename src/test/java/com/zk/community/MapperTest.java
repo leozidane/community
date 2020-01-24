@@ -33,13 +33,13 @@ public class MapperTest {
     @Autowired
     private MessageMapper messageMapper;
 
-    @Test
-    public void testSelectDiscussPosts() {
-        List<DiscussPost> discussPosts = discussPostMapper.selectDiscussPosts(149, 0, 5);
-        for (DiscussPost post : discussPosts) {
-            System.out.println(post);
-        }
-    }
+//    @Test
+//    public void testSelectDiscussPosts() {
+//        List<DiscussPost> discussPosts = discussPostMapper.selectDiscussPosts(149, 0, 5);
+//        for (DiscussPost post : discussPosts) {
+//            System.out.println(post);
+//        }
+//    }
 
     @Test
     public void testSelectDiscussPostRow() {
