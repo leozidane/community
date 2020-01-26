@@ -5,35 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/DiscussPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/DiscussPostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/dao/DiscussPostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/dao/DiscussPostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/AlphaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/AlphaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/DiscussPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/DiscussPostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/util/RedisKeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/util/RedisKeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/discussPost-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/discussPost-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zk/community/ElasticsearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zk/community/ElasticsearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zk/community/MapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zk/community/MapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/DiscussPostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/DiscussPostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/LikeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/LikeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/dao/DiscussPostMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/dao/DiscussPostMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/AlphaService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/AlphaService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/AlphaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/AlphaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/DiscussPostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/DiscussPostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/util/RedisKeyUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/util/RedisKeyUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/discussPost-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/discussPost-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zk/community/ElasticsearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zk/community/ElasticsearchTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zk/community/MapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zk/community/MapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/setting.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -266,7 +246,8 @@
       <workItem from="1579235963416" duration="19758000" />
       <workItem from="1579312777023" duration="1321000" />
       <workItem from="1579316211697" duration="48588000" />
-      <workItem from="1579594812267" duration="58388000" />
+      <workItem from="1579594812267" duration="69191000" />
+      <workItem from="1580033211596" duration="3668000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578468634911</created>
@@ -373,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579771315670</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="quartz完成定时计算帖子分数任务实现最热帖子排行">
+      <created>1579858867206</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579858867206</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +395,7 @@
     <MESSAGE value="使用Spring Security实现权限控制模块重构" />
     <MESSAGE value="置顶、加精、删除功能实现" />
     <MESSAGE value="使用redis的HyperLogLog与BitMap完成网站数据统计" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用redis的HyperLogLog与BitMap完成网站数据统计" />
+    <MESSAGE value="quartz完成定时计算帖子分数任务实现最热帖子排行" />
+    <option name="LAST_COMMIT_MESSAGE" value="quartz完成定时计算帖子分数任务实现最热帖子排行" />
   </component>
 </project>

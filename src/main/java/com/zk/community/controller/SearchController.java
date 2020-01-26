@@ -2,10 +2,12 @@ package com.zk.community.controller;
 
 import com.zk.community.entity.DiscussPost;
 import com.zk.community.entity.Page;
+import com.zk.community.service.DiscussPostService;
 import com.zk.community.service.ElasticsearchService;
 import com.zk.community.service.LikeService;
 import com.zk.community.service.UserService;
 import com.zk.community.util.CommunityConstant;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,6 +31,8 @@ public class SearchController implements CommunityConstant {
     @Autowired
     private LikeService likeService;
 
+    @Autowired
+    private DiscussPostService discussPostService;
     // search?keyword=xxx
     @RequestMapping(path = "search", method = RequestMethod.GET)
     public String getSearchPage(String keyword, Page page, Model model) {
@@ -41,6 +45,12 @@ public class SearchController implements CommunityConstant {
             for (DiscussPost post : searchResult){
                 Map<String, Object> map = new HashMap<>();
                 //帖子
+                if (StringUtils.isBlank(post.getTitle())) {
+                    post.setTitle(discussPostService.findDiscussPostById(post.getId()).getTitle());
+                }
+                if (StringUtils.isBlank(post.getContent())) {
+                    post.setContent(discussPostService.findDiscussPostById(post.getId()).getContent());
+                }
                 map.put("post", post);
                 //发帖人
                 map.put("user", userService.findUserById(post.getUserId()));

@@ -252,7 +252,7 @@ public class UserService implements CommunityConstant {
     //3.删除缓存数据
     private void clearCache(int id) {
         String userKey = RedisKeyUtil.getUserKey(id);
-        redisTemplate.opsForValue().decrement(userKey);
+        redisTemplate.delete(userKey);
     }
 
     public Collection<? extends GrantedAuthority> getAuthorities(int userId) {
