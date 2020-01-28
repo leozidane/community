@@ -9,6 +9,8 @@ import com.zk.community.util.CommunityUtil;
 import com.zk.community.util.MailClient;
 import com.zk.community.util.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -25,6 +27,8 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class UserService implements CommunityConstant {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
     @Autowired
     private UserMapper userMapper;
 
@@ -36,6 +40,7 @@ public class UserService implements CommunityConstant {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
 
 //    @Autowired
 //    private LoginTicketMapper loginTicketMapper;
@@ -54,11 +59,8 @@ public class UserService implements CommunityConstant {
         return user;
     }
 
-    /**
-     * 注册时需要进行的业务逻辑处理
-     *
-     * @return
-     */
+
+    //注册
     public Map<String, Object> register(User user) {
         Map<String, Object> map = new HashMap<>();
 
@@ -111,11 +113,7 @@ public class UserService implements CommunityConstant {
         return map;
     }
 
-    /**
-     * 激活
-     *
-     * @return
-     */
+    //激活
     public int activation(int userId, String code) {
         User user = userMapper.selectById(userId);
         if (user.getStatus() == 1) {
@@ -129,11 +127,8 @@ public class UserService implements CommunityConstant {
         }
     }
 
-    /**
-     * 登录业务逻辑处理
-     *
-     * @return
-     */
+
+    //登录
     public Map<String, Object> login(String username, String password, int expiredSeconds) {
         Map<String, Object> map = new HashMap<>();
 
@@ -180,11 +175,8 @@ public class UserService implements CommunityConstant {
 
     }
 
-    /**
-     * 退出登录功能
-     *
-     * @param ticket
-     */
+
+    //退出
     public void logout(String ticket) {
 //        loginTicketMapper.updateStatus(ticket, 1);
         String ticketKey = RedisKeyUtil.getTicketKey(ticket);
@@ -193,37 +185,22 @@ public class UserService implements CommunityConstant {
         redisTemplate.opsForValue().set(ticketKey, loginTicket);
     }
 
-    /**
-     * 根据登录凭证获取登录信息对象
-     *
-     * @param ticket
-     * @return
-     */
+
+    //根据登录凭证获取登录信息对象
     public LoginTicket findLoginTicket(String ticket) {
         String ticketKey = RedisKeyUtil.getTicketKey(ticket);
         return (LoginTicket) redisTemplate.opsForValue().get(ticketKey);
     }
 
-    /**
-     * 更新头像
-     *
-     * @param userId
-     * @param url
-     * @return
-     */
+    //更新头像
     public int updateHeader(int userId, String url) {
         int rows = userMapper.updateHeader(userId, url);
         clearCache(userId);
         return rows;
     }
 
-    /**
-     * 更新密码
-     *
-     * @param userId
-     * @param password
-     * @return
-     */
+
+    //更新密码
     public int updatePassword(int userId, String password) {
 //        return userMapper.updatePassword(userId,password);
         int rows = userMapper.updatePassword(userId, password);
@@ -255,6 +232,7 @@ public class UserService implements CommunityConstant {
         redisTemplate.delete(userKey);
     }
 
+    //返回权限集合
     public Collection<? extends GrantedAuthority> getAuthorities(int userId) {
         User user = userMapper.selectById(userId);
         List<GrantedAuthority> list = new ArrayList<>();
