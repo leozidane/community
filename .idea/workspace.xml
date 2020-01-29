@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92fa4840-e4f8-4275-856d-548324109de9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/DiscussPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/DiscussPostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/dao/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/dao/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zk/community/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zk/community/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zk/community/ElasticsearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zk/community/ElasticsearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/comment-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/comment-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/discussPost-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/discussPost-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/my-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/my-post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/my-reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/my-reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zk/community/QuartzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zk/community/QuartzTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/DiscussPostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/DiscussPostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zk/community/ElasticsearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zk/community/ElasticsearchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/config/SecurityConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/config/SecurityConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/config/SecurityConfig$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/config/SecurityConfig$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/dao/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/dao/CommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zk/community/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zk/community/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/comment-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/comment-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/discussPost-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/discussPost-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/my-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/my-post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/my-reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/my-reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zk/community/QuartzTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zk/community/QuartzTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,22 +145,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CommunityApplication">
-    <configuration name="CaffeineTest.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="community" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zk.community.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zk.community" />
-      <option name="MAIN_CLASS_NAME" value="com.zk.community.CaffeineTest" />
-      <option name="METHOD_NAME" value="init" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CaffeineTest.testPostListCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="community" />
       <extension name="coverage">
@@ -207,6 +209,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zk.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zk.community" />
+      <option name="MAIN_CLASS_NAME" value="com.zk.community.SpringBootTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CommunityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="community" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zk.community.CommunityApplication" />
@@ -216,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QuartzTest.testDelete" />
+        <item itemvalue="JUnit.SpringBootTest" />
         <item itemvalue="JUnit.ElasticsearchTest.testInsertAll" />
         <item itemvalue="JUnit.ElasticsearchTest.testDelete" />
         <item itemvalue="JUnit.CaffeineTest.testPostListCache" />
-        <item itemvalue="JUnit.CaffeineTest.init" />
-        <item itemvalue="JUnit.QuartzTest.testDelete" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +265,9 @@
       <workItem from="1579316211697" duration="48588000" />
       <workItem from="1579594812267" duration="69191000" />
       <workItem from="1580033211596" duration="7716000" />
-      <workItem from="1580129518883" duration="16976000" />
+      <workItem from="1580129518883" duration="25602000" />
+      <workItem from="1580224600558" duration="587000" />
+      <workItem from="1580285706954" duration="13273000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578468634911</created>
@@ -369,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580037092591</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="优化网站性能">
+      <created>1580192595990</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1580192595990</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +431,7 @@
     <MESSAGE value="使用redis的HyperLogLog与BitMap完成网站数据统计" />
     <MESSAGE value="quartz完成定时计算帖子分数任务实现最热帖子排行" />
     <MESSAGE value="上传图片到七牛云服务器" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传图片到七牛云服务器" />
+    <MESSAGE value="优化网站性能" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化网站性能" />
   </component>
 </project>

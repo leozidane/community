@@ -38,4 +38,18 @@
         from comment
         where id = #{id}
     </select>
+
+    <select id="selectCountByUserId" resultType="int">
+        select count(id)
+        from comment
+        where user_id = #{userId}
+        and entity_type = #{entityType}
+    </select>
+
+    <select id="selectCommentsByUserId" resultType="comment">
+        select <include refid="selectFields"></include>
+        from comment
+        where user_id = #{userId}
+        and entity_type = #{entityType}
+    </select>
 </mapper>

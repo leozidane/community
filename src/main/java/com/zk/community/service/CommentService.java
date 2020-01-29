@@ -37,11 +37,8 @@ public class CommentService {
     public Comment findCommentById(int id) {
         return commentMapper.selectCommentById(id);
     }
-    /**
-     * 增加评论
-     * @param comment
-     * @return
-     */
+
+    //增加评论
     @Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
     public int addComment(Comment comment) {
         if (comment == null) {
@@ -60,5 +57,15 @@ public class CommentService {
             discussPostService.updateCommentCount(comment.getEntityId(), count);
         }
         return rows;
+    }
+
+    //查找用户的回复数量
+    public int findCommentCountByUserId(int userId, int entityType) {
+        return commentMapper.selectCountByUserId(userId, entityType);
+    }
+
+    //查找用户对实体的回复
+    public List<Comment> findCommentsByUserId(int userId, int entityType, int offset, int limit) {
+        return commentMapper.selectCommentsByUserId(userId, entityType, offset, limit);
     }
 }

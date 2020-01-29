@@ -3,13 +3,15 @@ package com.zk.community.controller;
 import com.qiniu.util.Auth;
 import com.qiniu.util.StringMap;
 import com.zk.community.annotation.LoginRequired;
+import com.zk.community.entity.Comment;
+import com.zk.community.entity.DiscussPost;
+import com.zk.community.entity.Page;
 import com.zk.community.entity.User;
-import com.zk.community.service.FollowService;
-import com.zk.community.service.LikeService;
-import com.zk.community.service.UserService;
+import com.zk.community.service.*;
 import com.zk.community.util.CommunityConstant;
 import com.zk.community.util.CommunityUtil;
 import com.zk.community.util.HostHolder;
+import com.zk.community.util.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +30,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/user")
@@ -46,6 +52,12 @@ public class UserController implements CommunityConstant {
 
     @Autowired
     private FollowService followService;
+
+    @Autowired
+    private DiscussPostService discussPostService;
+
+    @Autowired
+    private CommentService commentService;
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
@@ -207,7 +219,7 @@ public class UserController implements CommunityConstant {
         return "redirect:/index";
     }
 
-    //个人主页
+    //个人主页：信息
     @RequestMapping(path = "/profile/{userId}", method = RequestMethod.GET)
     public String getProfilePage(@PathVariable("userId") int userId, Model model) {
         User user = userService.findUserById(userId);
@@ -232,5 +244,52 @@ public class UserController implements CommunityConstant {
         }
         model.addAttribute("hasFollowed", hasFollowed);
         return "/site/profile";
+    }
+    //个人主页：回复
+    @RequestMapping(path = "/post/{userId}", method = RequestMethod.GET)
+    public String getMyPostPage(@PathVariable("userId") int userId, Model model, Page page) {
+        //设置分页信息
+        page.setLimit(10);
+        page.setRows(discussPostService.findDiscussPostRow(userId));
+        page.setPath("/user/post/" + userId);
+
+        //得到帖子列表
+        List<DiscussPost> posts = discussPostService.findDiscussPosts(userId, page.getOffset(), page.getLimit(), 0);
+        List<Map<String, Object>> postVoList = new ArrayList<>();
+        if (posts != null) {
+            for (DiscussPost post : posts) {
+                Map<String, Object> postVo = new HashMap<>();
+                postVo.put("post", post);
+                long likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
+                postVo.put("likeCount", likeCount);
+                postVoList.add(postVo);
+            }
+        }
+        model.addAttribute("posts", postVoList);
+        return "/site/my-post";
+    }
+    //个人主页：评论
+    @RequestMapping(path = "/comment/{userId}", method = RequestMethod.GET)
+    public String getCommentPage(@PathVariable("userId") int userId, Page page, Model model) {
+        //设置分页信息
+        page.setPath("/user/comment/" + userId);
+        page.setRows(commentService.findCommentCountByUserId(userId, ENTITY_TYPE_POST));
+
+        //得到用户对帖子的回复
+        List<Comment> commentList = commentService.findCommentsByUserId(userId, ENTITY_TYPE_POST, page.getOffset(), page.getLimit());
+        List<Map<String, Object>> commentVoList = new ArrayList<>();
+        if (commentList != null) {
+            for (Comment comment : commentList) {
+                Map<String, Object> commentVo = new HashMap<>();
+                commentVo.put("comment", comment);
+                DiscussPost post = discussPostService.findDiscussPostById(comment.getEntityId());
+                if (post != null) {
+                    commentVo.put("post", post);
+                    commentVoList.add(commentVo);
+                }
+            }
+        }
+        model.addAttribute("replyList", commentVoList);
+        return "/site/my-reply";
     }
 }
